@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  background: chartreuse;
+  border: 2px solid black;
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: greenyellow;
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 99999px;
+  padding: 10px;
+  animation: fadeOut 5.5s ease infinite;
+}
+.stopAnimation {
+  animation: none !important;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+.img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  animation: bounce 5.5s infinite;
+  transition: transform 0.2s;
+}
+.img:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+.marketForm {
+  width: 90vw;
+  height: 30%;
+  padding: 30px;
+  background-color: chartreuse;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marketForm input {
+  height: 40px;
+  width: 90%;
+  outline: none;
+}
+.marketForm button {
+  height: 40px;
+  width: 50px;
+  margin-left: 10px;
+  padding: 10px;
+}
+caption {
+  border: 1px solid black;
+  padding: 5px;
+  font-weight: 800;
+}
+.item-table {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item-table th,
+.item-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.item-table th {
+  background: black;
+  color: white;
+}
+.eddit:hover {
+  background: rgb(235, 230, 230);
+  border-radius: 50%;
+}
+.check:hover {
+  background: green;
+  border-radius: 50%;
+}
+.remove:hover {
+  background: rgb(214, 130, 130);
+  fill: white;
+  border-radius: 50%;
+}
+.completed td {
+  text-decoration: line-through;
+  color: gray;
+}
+.button {
+  padding: 10px;
+  width: 20px;
+  border: none;
+  border-radius: 5px;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(0.6);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(0.2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  75% {
+    opacity: 0.3;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.6);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
